@@ -39,7 +39,7 @@ reader.question("What would you like to calculate?", function(input){
 		reader.close;
 	}
 	else{
-		onsole.log("Invalid Entry");
+		console.log("Invalid Entry");
 	}
 
 
