@@ -49,25 +49,18 @@ reader.question("What would you like to calculate?", function(input){
 		reader.close;
 	}
 	else if(tokens[0] === "^"){
-		let power = num2;
-		for(let i = 1; i < num2; i++){
-			power = power*num2;
-		}
+		let power = num1**num2;
 		console.log(num1, " to the power of " , num2, " is ", power);
 		reader.close;
 	}
 	else if(tokens[0] === "%"){
 		let remain = num1 % num2;
-		console.log(num1, " divided by " , num2, " leaves a remainder of " , remain);
+		console.log("When ", num1," is divided by ",num2,"the remainder is ",remain);
 		reader.close;
 	}
 	else{
 		console.log("Invalid Entry");
+		reader.close;
 	}
-
-
-
-	// This line closes the connection to the command line interface.
-	reader.close()
 
 });
