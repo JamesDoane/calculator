@@ -35,7 +35,30 @@ reader.question("What would you like to calculate?", function(input){
 	}
 	else if(tokens[0] === "sqrt"){
 		let sqrt = Math.sqrt(num1);
-		console.log("Square root of", num1, "is " , sqrt);
+		console.log("Square root of ", num1, " is " , sqrt);
+		reader.close;
+	}
+	else if(tokens[0] === "^2"){
+		let squared = num1*num1;
+		console.log(num1, " squared is ", squared);
+		reader.close;
+	}
+	else if(tokens[0] === "^3"){
+		let cube = num1 * num1 * num1;
+		console.log(num1, " cubed is ");
+		reader.close;
+	}
+	else if(tokens[0] === "^"){
+		let power = num2;
+		for(let i = 1; i < num2; i++){
+			power = power*num2;
+		}
+		console.log(num1, " to the power of " , num2, " is ", power);
+		reader.close;
+	}
+	else if(tokens[0] === "%"){
+		let remain = num1 % num2;
+		console.log(num1, " divided by " , num2, " leaves a remainder of " , remain);
 		reader.close;
 	}
 	else{
